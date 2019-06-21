@@ -13,49 +13,16 @@
     <div id="root"></div>
     <script type="text/babel">
 
-/*
-      function tick() {
-        const element = (
-          <div>
-            <h1>Hello, world!</h1>
-            <h2>It is {new Date().toLocaleTimeString()}.</h2>
-          </div>
-        );
-        ReactDOM.render(element, document.getElementById('root'));
-      }
+      const numbers = [1, 2, 3, 4, 5];
+      const doubled = numbers.map(number => number * 2);
+      console.log(doubled);
+      const filtered = numbers.filter(number => number > 3);
+      console.log(filtered);
 
-      setInterval(tick, 1000);
+      
 
-*/
-      class Toggle extends React.Component {
 
-        constructor(props) {
-          super(props);
-          this.state = {isToggleOn : true};
 
-          this.handleClick = this.handleClick.bind(this);
-        }
-
-        handleClick() {
-          this.setState(state => ({
-            isToggleOn: !state.isToggleOn
-          }));
-        }
-
-        render() {
-          return (
-            <button onClick={this.handleClick} >
-              {this.state.isToggleOn ? 'On' : 'OFF'}
-            </button>
-          );
-        }
-      }
-
-      ReactDOM.render(
-        <Toggle />,
-        document.getElementById('root')
-      );
-    
     </script>
     <!--
       Note: this page is a great way to try React but it's not suitable for production.
